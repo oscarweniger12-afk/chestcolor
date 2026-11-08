@@ -32,7 +32,7 @@ public class ChestColorMod implements ClientModInitializer {
         // Erst als "geöffnet" markieren, wenn das Inventar wirklich aufgeht
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (pending == null || client.level == null) return;
-            if (client.screen instanceof ContainerScreen) {
+            if (client.gui.screen() instanceof ContainerScreen) {
                 OpenedChests.markOpened(pendingDim, pending, client.level.getBlockState(pending));
                 pending = null;
             } else if (client.level.getGameTime() - pendingSince > 40) {
