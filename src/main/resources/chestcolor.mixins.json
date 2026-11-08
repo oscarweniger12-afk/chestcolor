@@ -1,0 +1,7 @@
+{
+  "required": true,
+  "package": "de.chestcolor.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": ["ChestRendererMixin"],
+  "injectors": { "defaultRequire": 1 }
+}
